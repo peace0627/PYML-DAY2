@@ -8,6 +8,7 @@ dataset = pd.read_csv('studentscores.csv')
 X = dataset.iloc[ : ,   : 1 ].values
 Y = dataset.iloc[ : , 1 ].values
 X_train, X_test, Y_train, Y_test = train_test_split( X, Y, test_size = 1/4, random_state = 0) 
+print('training sets and Test sets\nX_train=\n', X_train,"\nX_test\n",X_test,'\nY_train=\n', Y_train,"\nY_test\n",Y_test,'\n')
 
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
